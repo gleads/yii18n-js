@@ -6,7 +6,7 @@
         "issues": "https://github.com/arthurfsilva/yii18n-js/issues",
         "source": "https://github.com/arthurfsilva/yii18n-js"
     },
-    "type": "yii i18n js",
+    "type": "yii2-extension",
     "authors": [
         {
             "name": "Arthur Ferreira Silva",
