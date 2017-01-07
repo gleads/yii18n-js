@@ -1,0 +1,25 @@
+{
+    "name": "yac/yii18n",
+    "description": "i18n for javascript files",
+    "keywords": ["yii","i18n"],
+    "support": {
+        "issues": "https://github.com/arthurfsilva/yii18n-js/issues",
+        "source": "https://github.com/arthurfsilva/yii18n-js"
+    },
+    "type": "yii i18n js",
+    "authors": [
+        {
+            "name": "Arthur Ferreira Silva",
+            "email": "arthur.fsilva96@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "yac/yii18n": ""
+        }
+    }
+}
