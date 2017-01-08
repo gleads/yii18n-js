@@ -4,7 +4,7 @@ namespace yac\yii18n;
 
 use yii\web\AssetBundle;
 
-class TranslateAsset extends AssetBundle
+class TranslatorAsset extends AssetBundle
 {
 
     public $sourcePath = __DIR__ ;
