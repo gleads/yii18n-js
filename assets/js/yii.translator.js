@@ -20,7 +20,14 @@ yii.t = function(category, message, params = []) {
     }
 
     var getMessageAjax = function(category){
-
+        alert('asd');
+        $.ajax({
+            url: 'translator',
+            data: {category: category},
+            success: function(response){
+                messages += response;
+            }
+        });
     }
 
     getMessage(category);
