@@ -12,7 +12,7 @@ yii.t = function(category, message, params = []) {
         }
         getMessageAjax(category);
 
-        getMessage(category);
+        //getMessage(category);
     };
 
     var findCategory = function(category) {
@@ -20,9 +20,9 @@ yii.t = function(category, message, params = []) {
     }
 
     var getMessageAjax = function(category){
-        alert('asd');
+
         $.ajax({
-            url: 'translator',
+            url: '/translator/translator/index',
             data: {category: category},
             success: function(response){
                 messages += response;

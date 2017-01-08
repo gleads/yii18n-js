@@ -2,13 +2,13 @@
 
 namespace yac\yii18n\controllers;
 
-use yii\base\Controller;
+use yii\web\Controller;
 
 class TranslatorController extends Controller
 {
     public function actionIndex($category, $message = '', $params = [])
     {
-        $this->response->format = \yii\response\Response::JSON_FORMAT;
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
         /*return [
             'configuracoes' => [
@@ -16,7 +16,7 @@ class TranslatorController extends Controller
                 'app.test' => 'test',
             ]
         ];*/
-        static::$app->getI18n()
+        //static::$app->getI18n()
         print_r('XXXXSAD');die;
     }
 }
