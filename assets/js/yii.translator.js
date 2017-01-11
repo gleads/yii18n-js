@@ -1,8 +1,6 @@
 yii.t = function(category, message, params = []) {
     var messages = {
-        'contatos':  {
-            'mykey': 'hello'
-        },
+        
     };
 
     var getMessage = function(category) {
