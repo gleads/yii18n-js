@@ -2,27 +2,9 @@
 
 namespace yac\yii18n;
 
-use yii\i18n\GettextMessageSource;
+use yii\i18n\PhpMessageSource;
 
-class Messages extends GettextMessageSource
+class Messages extends PhpMessageSource
 {
-    public function loadMessages($category, $language)
-    {
-        return parent::loadMessages($category, $language);
-    }
 
-    public function loadFallbackMessages($category, $fallbackLanguage, $messages, $originalMessageFile)
-    {
-        return parent::loadFallbackMessages($category, $fallbackLanguage, $messages, $originalMessageFile);
-    }
-
-    public function getMessageFilePath($language)
-    {
-        return parent::getMessageFilePath($language);
-    }
-
-    public function loadMessagesFromFile($messageFile, $category)
-    {
-        return parent::loadMessagesFromFile($messageFile, $category);
-    }
 }
