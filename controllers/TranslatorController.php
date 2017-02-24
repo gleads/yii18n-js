@@ -11,11 +11,7 @@ class TranslatorController extends Controller
     {
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-        //print_r(\Yii::$app->language);die;
-        //print_r(\Yii::t('app', 'welcome'));die;
-
         $i18n = new Messages();
-        var_dump($i18n->loadMessages($category, \Yii::$app->language));die;
-
+        return $i18n->loadMessages($category, \Yii::$app->language);
     }
 }
