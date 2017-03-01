@@ -1,16 +1,20 @@
+var messages = {};
+
 yii.t = function(category, message, params = []) {
-    var messages = {
-        
-    };
+    //var messages = {};
 
     var getMessage = function(category) {
-        var messages = findCategory(category);
-        if (messages) {
-            //found categories
+        var inArray = findCategory(category);
+
+        if (inArray) {
+            //console.log(messages);
+            return translate(category, message, params);
         }
+
         getMessageAjax(category);
 
-        //getMessage(category);
+        return 'Test';
+
     };
 
     var findCategory = function(category) {
@@ -23,14 +27,19 @@ yii.t = function(category, message, params = []) {
             url: '/translator/translator/index',
             data: {category: category},
             success: function(response){
-                messages += response;
+                messages[category] = response;
+                getMessage(category);
+                //return true;
             }
         });
-    }
-
-    getMessage(category);
-
-    return {
 
     }
+
+    var translate = function(category, message, params){
+        //console.log(messages[category][message]);
+        return messages[category][message];
+    }
+
+    return getMessage(category);
+
 }
