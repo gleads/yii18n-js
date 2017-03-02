@@ -33,7 +33,13 @@ yii.t = function(category, message, params = []) {
 
     var translate = function(category, message, params){
         if(messages[category][message] != undefined){
-            return messages[category][message];
+            translatedMessage = messages[category][message];
+
+            for (var index in params) {
+                translatedMessage = translatedMessage.replace("{" + index + "}", params[index]);
+            }
+
+            return translatedMessage;
         }
         return message;
     }
