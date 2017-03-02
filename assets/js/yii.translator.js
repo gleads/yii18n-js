@@ -11,10 +11,10 @@ yii.t = function(category, message, params = []) {
             return translate(category, message, params);
         }
 
-        getMessageAjax(category);
+        let json = getMessageAjax(category).responseText;
+        messages[category] = JSON.parse(json);
 
-        return 'Test';
-
+        return translate(category, message, params);
     };
 
     var findCategory = function(category) {
@@ -23,21 +23,19 @@ yii.t = function(category, message, params = []) {
 
     var getMessageAjax = function(category){
 
-        $.ajax({
+       return $.ajax({
             url: '/translator/translator/index',
+            async: false,
             data: {category: category},
-            success: function(response){
-                messages[category] = response;
-                getMessage(category);
-                //return true;
-            }
         });
 
     }
 
     var translate = function(category, message, params){
-        //console.log(messages[category][message]);
-        return messages[category][message];
+        if(messages[category][message] != undefined){
+            return messages[category][message];
+        }
+        return message;
     }
 
     return getMessage(category);
