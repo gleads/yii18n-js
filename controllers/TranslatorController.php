@@ -8,7 +8,7 @@ use yii\i18n\PhpMessageSource;
 
 class TranslatorController extends Controller
 {
-    public function actionIndex($category, $message = '', $params = [])
+    public function actionIndex($category)
     {
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
