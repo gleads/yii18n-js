@@ -4,6 +4,7 @@ namespace yac\yii18n\controllers;
 
 use yii\web\Controller;
 use yac\yii18n\Messages;
+use yii\i18n\PhpMessageSource;
 
 class TranslatorController extends Controller
 {
@@ -11,7 +12,9 @@ class TranslatorController extends Controller
     {
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-        $i18n = new Messages();
-        return $i18n->loadMessages($category, \Yii::$app->language);
+        $method = new \ReflectionMethod('\yii\i18n\PhpMessageSource', 'loadMessages');
+        $method->setAccessible(true);
+
+        return $method->invoke(new PhpMessageSource, $category, \Yii::$app->language);
     }
 }
