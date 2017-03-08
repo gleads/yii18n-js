@@ -30,6 +30,25 @@ You must add the translator module in your config/web.php
     ],
 ```
 
+Add the class message source with class 'yac\yii18n\PhpMessageSource'
+
+```
+    'components' => [
+        'i18n' => [
+            'translations' => [
+                'app*' => [
+                    'class' => 'yac\yii18n\PhpMessageSource',  // Add This class
+                    'fileMap' => [
+                        'app' => 'app.php',
+                        'app/error' => 'error.php',
+                    ],
+                ],
+            ],
+        ],
+    ],
+
+```
+
 -----------------------
 ``` note: you need set urlmanager > enablePrettyUrl as true ```
 
@@ -54,4 +73,3 @@ Todo
 
 
 ----------
-
