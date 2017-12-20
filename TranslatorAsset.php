@@ -1,6 +1,6 @@
 <?php
 
-namespace yac\yii18n;
+namespace gleads\yii18n;
 
 use yii\web\AssetBundle;
 

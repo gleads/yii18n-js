@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yac\yii18n;
+namespace gleads\yii18n;
 
 use Yii;
 

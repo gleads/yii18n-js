@@ -13,7 +13,7 @@ Installation
 -------------
 
 Add in your composer.json file
-``` "yac/yii18n": "dev-master" ```
+``` "gleads/yii18n": "dev-master" ```
 
 Then run in your terminal:
 ``` composer update ```
@@ -25,19 +25,19 @@ You must add the translator module in your config/web.php
 ```php
     'modules' => [
         'translator' => [
-            'class' => 'yac\yii18n\TranslatorModule'
+            'class' => 'gleads\yii18n\TranslatorModule'
         ]
     ],
 ```
 
-Add the class message source with class 'yac\yii18n\PhpMessageSource'
+Add the class message source with class 'gleads\yii18n\PhpMessageSource'
 
 ```
     'components' => [
         'i18n' => [
             'translations' => [
                 'app*' => [
-                    'class' => 'yac\yii18n\PhpMessageSource',  // Add This class
+                    'class' => 'gleads\yii18n\PhpMessageSource',  // Add This class
                     'fileMap' => [
                         'app' => 'app.php',
                         'app/error' => 'error.php',
@@ -55,7 +55,7 @@ Add the class message source with class 'yac\yii18n\PhpMessageSource'
 in your view you must add the translator asset:
 
 ```php
-    yac\yii18n\TranslatorAsset::register($this);
+    gleads\yii18n\TranslatorAsset::register($this);
 ```
 
 then it's already to use you can use like yii::t() style

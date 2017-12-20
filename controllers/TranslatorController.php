@@ -1,9 +1,9 @@
 <?php
 
-namespace yac\yii18n\controllers;
+namespace gleads\yii18n\controllers;
 
 use yii\web\Controller;
-use yac\yii18n\Messages;
+use gleads\yii18n\Messages;
 use yii\i18n\PhpMessageSource;
 use \ReflectionMethod;
 use Yii;
