@@ -1,17 +1,17 @@
 var messages = {};
 
-yii.t = function(category, message, params = []) {
-    //var messages = {};
-
+yii.t = function(category, message, params) {
+    
+    params = params || [];
+    
     var getMessage = function(category) {
         var inArray = findCategory(category);
 
-        if (inArray) {
-            //console.log(messages);
+        if (inArray) {            
             return translate(category, message, params);
         }
 
-        let json = getMessageAjax(category).responseText;
+        var json = getMessageAjax(category).responseText;
         messages[category] = JSON.parse(json);
 
         return translate(category, message, params);
