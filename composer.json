@@ -1,5 +1,5 @@
 {
-    "name": "yac/yii18n",
+    "name": "gleads/yii18n",
     "description": "i18n for javascript files",
     "keywords": ["yii","i18n"],
     "support": {
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "yac\\yii18n\\": ""
+            "gleads\\yii18n\\": ""
         }
     }
 }
